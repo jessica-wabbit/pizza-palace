@@ -6,19 +6,27 @@ function Pizza(size, toppings) {
   this.toppings = [];
 }
 
+// Pizza.prototype.yourOrder = function () {
+//  return "Based off of the information you've given us, you've ordered a " + this.size + " Pizza, with the following toppings: " + this.toppings;
+//  }
+
+
+
 //User Interface Logic
 
 $(document).ready(function(){
   $("form#pizza_order").submit(function(event){
     event.preventDefault();
-    //$("#work-responses").show();
+    $(".your-total").show();
     var pizzaSize = $(this).find("#pizza-size").val();
+    $("#pizzaSize").text(pizzaSize);
     var newPizza = new Pizza(pizzaSize);
 
     $("input:checkbox[name=topping]:checked").each(function(){
       var toppingsOrdered = $(this).val();
       pizzaSubTotal = pizzaSubTotal +=1
       newPizza.toppings.push(toppingsOrdered);
+      $("#your-toppings").append(toppingsOrdered + "<br>");
     });
     console.log(newPizza);
 
@@ -29,8 +37,9 @@ $(document).ready(function(){
     } else if (newPizza.size === "Family-Size") {
       $("#order-total").text(10 + pizzaSubTotal)
     };
-    //$("#order-total").text(newPizza.orderTotal);
 
-    //$('#transportation_survey').hide();
+    //$(".trial-order").append(newPizza.yourOrder);
+
+    $(".order-form").hide();
   });
 });

@@ -14,41 +14,53 @@
       <div class="row">
         <div class="col-md-6">
           <h1>Place Your Pizza Palace Pizza Order</h1>
-          <h3>Please fill out the following information:</h3>
-          <p>Remember, all of our pizzas are already topped with a fresh, home-made marinara and a mozarella and romano cheese blend!</p>
+          <div class="order-form">
+            <h3>Please fill out the following information:</h3>
+            <p>Remember, all of our pizzas are already topped with a fresh, home-made marinara and a mozarella and romano cheese blend!</p>
 
-          <form id="pizza_order">
-            <div class="pie-sizes">
-              <p><strong>Choose the Size of Your Pie:</strong></p>
-              <select class="form-control" id="pizza-size">
-                <option>Medium</option>
-                <option>Large</option>
-                <option>Family-Size</option>
-              </select>
-            </div>
-            <br>
-            <div class="form-group">
-              <p><strong>Add as many toppings as you want, just know that they each cost a dollar:</strong></p>
-              <input type="checkbox" name="topping" value="Pepperoni">Pepperoni<br>
-              <input type="checkbox" name="topping" value="Black Forest Ham">Black Forest Ham<br>
-              <input type="checkbox" name="topping" value="Capicola Salami">Capicola Salami<br>
-              <input type="checkbox" name="topping" value="Bacon">Bacon<br>
-              <input type="checkbox" name="topping" value="Chorizo">Chorizo<br>
-              <input type="checkbox" name="topping" value="Fennel Sausage">Fennel Sausage<br>
-              <input type="checkbox" name="topping" value="Green Bell Pepper">Green Bell Pepper<br>
-              <input type="checkbox" name="topping" value="Roma Tomatoes">Roma Tomatoes<br>
-              <input type="checkbox" name="topping" value="Basil">Basil<br>
-              <input type="checkbox" name="topping" value="Black Olives">Black Olives<br>
-              <input type="checkbox" name="topping" value="Kalamative Olives">Kalamative Olives<br>
-              <input type="checkbox" name="topping" value="Spinach">Spinach<br>
-              <input type="checkbox" name="topping" value="Artichoke Hearts">Artichoke Hearts<br>
-            </div>
-           <button type="submit">Submit Pizza Order</button>
-          </form>
+            <form id="pizza_order">
+              <div class="pie-sizes">
+                <p><strong>Choose the Size of Your Pie:</strong></p>
+                <select class="form-control" id="pizza-size">
+                  <option>Medium</option>
+                  <option>Large</option>
+                  <option>Family-Size</option>
+                </select>
+              </div>
+              <br>
+              <div class="form-group">
+                <p><strong>Add as many toppings as you want, just know that they each cost a dollar:</strong></p>
+                <input type="checkbox" name="topping" value="Pepperoni">Pepperoni<br>
+                <input type="checkbox" name="topping" value="Black Forest Ham">Black Forest Ham<br>
+                <input type="checkbox" name="topping" value="Capicola Salami">Capicola Salami<br>
+                <input type="checkbox" name="topping" value="Bacon">Bacon<br>
+                <input type="checkbox" name="topping" value="Chorizo">Chorizo<br>
+                <input type="checkbox" name="topping" value="Fennel Sausage">Fennel Sausage<br>
+                <input type="checkbox" name="topping" value="Green Bell Pepper">Green Bell Pepper<br>
+                <input type="checkbox" name="topping" value="Roma Tomatoes">Roma Tomatoes<br>
+                <input type="checkbox" name="topping" value="Basil">Basil<br>
+                <input type="checkbox" name="topping" value="Black Olives">Black Olives<br>
+                <input type="checkbox" name="topping" value="Kalamative Olives">Kalamative Olives<br>
+                <input type="checkbox" name="topping" value="Spinach">Spinach<br>
+                <input type="checkbox" name="topping" value="Artichoke Hearts">Artichoke Hearts<br>
+              </div>
+             <button type="submit">Submit Pizza Order</button>
+            </form>
+          </div>
           <br>
           <br>
           <div class="your-total">
-            <p>Your Total comes to: $<span id="order-total"></span>
+            <h3>Order Confirmation</h3>
+            <p>Based off of the information you've given us, you've ordered a <span id="pizzaSize"></span> Pizza with the following toppings:</p>
+            <span id="your-toppings">
+
+            </span>
+            <br>
+
+            <h3>Your Total comes to: $<span id="order-total"></span></h3>
+
+            <span class="trial-order">
+            </span>
           </div>
         </div>
 
