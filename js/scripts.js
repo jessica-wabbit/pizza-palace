@@ -6,9 +6,9 @@ function Pizza(size, toppings) {
   this.toppings = [];
 }
 
-// Pizza.prototype.yourOrder = function () {
-//  return "Based off of the information you've given us, you've ordered a " + this.size + " Pizza, with the following toppings: " + this.toppings;
-//  }
+Pizza.prototype.yourOrder = function () {
+ return "Based off of the information you've given us, you've ordered a " + " (" + this.size + ") " + "  Pizza, with the following toppings: " + " (" + this.toppings + ") ";
+ }
 
 
 
@@ -38,7 +38,7 @@ $(document).ready(function(){
       $("#order-total").text(10 + pizzaSubTotal)
     };
 
-    //$(".trial-order").append(newPizza.yourOrder);
+    $(".trial-order").text(newPizza.yourOrder);
 
     $(".order-form").hide();
   });

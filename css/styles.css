@@ -1,3 +1,28 @@
+body {
+  background-color: #FFFF66;
+  color: #FF6633;
+}
+
+h1, h2, h3 {
+  color: #4dd0e1;
+}
+
 .your-total {
   display: none;
+}
+
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
 }
