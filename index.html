@@ -2,6 +2,7 @@
 <html>
   <head>
     <link href="css/bootstrap.css" rel ="stylesheet" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Exo+2|Oxygen|Sigmar+One" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
     <script src="js/jquery-3.2.0.js"></script>
     <script src="js/scripts.js"></script>
@@ -33,20 +34,24 @@
               </div>
               <br>
               <div class="form-group">
-                <p><strong>Add as many toppings as you want, just know that they each cost a dollar:</strong></p>
-                <input type="checkbox" name="topping" value="Pepperoni">Pepperoni<br>
-                <input type="checkbox" name="topping" value="Black Forest Ham">Black Forest Ham<br>
-                <input type="checkbox" name="topping" value="Capicola Salami">Capicola Salami<br>
-                <input type="checkbox" name="topping" value="Bacon">Bacon<br>
-                <input type="checkbox" name="topping" value="Chorizo">Chorizo<br>
-                <input type="checkbox" name="topping" value="Fennel Sausage">Fennel Sausage<br>
-                <input type="checkbox" name="topping" value="Green Bell Pepper">Green Bell Pepper<br>
-                <input type="checkbox" name="topping" value="Roma Tomatoes">Roma Tomatoes<br>
-                <input type="checkbox" name="topping" value="Basil">Basil<br>
-                <input type="checkbox" name="topping" value="Black Olives">Black Olives<br>
-                <input type="checkbox" name="topping" value="Kalamative Olives">Kalamative Olives<br>
-                <input type="checkbox" name="topping" value="Spinach">Spinach<br>
-                <input type="checkbox" name="topping" value="Artichoke Hearts">Artichoke Hearts<br>
+                <p><strong>Add as many toppings as you want!  Each veggie topping is $1 and each meat topping is $2, go ahead and have at it:</strong></p>
+                <input type="checkbox" name="meatTopping" value=" Pepperoni"> Pepperoni<br>
+                <input type="checkbox" name="meatTopping" value="  Black Forest Ham"> Black Forest Ham<br>
+                <input type="checkbox" name="meatTopping" value=" Capicola Salami"> Capicola Salami<br>
+                <input type="checkbox" name="meatTopping" value=" Bacon"> Bacon<br>
+                <input type="checkbox" name="meatTopping" value=" Chorizo"> Chorizo<br>
+                <input type="checkbox" name="meatTopping" value=" Fennel Sausage"> Fennel Sausage<br>
+                <input type="checkbox" name="topping" value=" Green Bell Pepper"> Green Bell Pepper<br>
+                <input type="checkbox" name="topping" value=" Roma Tomatoes"> Roma Tomatoes<br>
+                <input type="checkbox" name="topping" value=" Basil"> Basil<br>
+                <input type="checkbox" name="topping" value=" Black Olives"> Black Olives<br>
+                <input type="checkbox" name="topping" value=" Kalamative Olives"> Kalamative Olives<br>
+                <input type="checkbox" name="topping" value=" Mushrooms"> Mushrooms<br>
+                <input type="checkbox" name="topping" value=" Spinach"> Spinach<br>
+                <input type="checkbox" name="topping" value=" Chives"> Chives<br>
+                <input type="checkbox" name="topping" value=" Pineapple"> Pineapple<br>
+                <input type="checkbox" name="topping" value=" Jalape&#241;os"> Jalape&#241;os<br>
+                <input type="checkbox" name="topping" value=" Artichoke Hearts"> Artichoke Hearts<br>
               </div>
              <button class="btn btn-info" type="submit">Submit Pizza Order</button>
             </form>
@@ -55,16 +60,12 @@
           <br>
           <div class="your-total">
             <h3>Order Confirmation</h3>
-            <p>Based off of the information you've given us, you've ordered a <span id="pizzaSize"></span> Pizza with the following toppings:</p>
-            <span id="your-toppings">
-
+            <span class="trial-order">
             </span>
-            <br>
 
             <h3>Your Total comes to: $<span id="order-total"></span></h3>
 
-            <span class="trial-order">
-            </span>
+
           </div>
         </div>
 
@@ -73,10 +74,12 @@
         <div class="col-md-4">
           <h2>All About Pizza Palace</h2>
           <p>We love build-your-own pies, which is why it's the only thing we offer!</p>
-          <h2>Music to Jam to:<h2>
+          <h3>A Pizza Suggestion from System of A Down:</h3>
           <div class="video-container">
             <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/LfHGqyMxuqI?rel=0" width="560" height="315"></iframe>
           </div>
+          <br>
+          <p align="center">"Pepperoni and green peppers, mushrooms, olive, chives."</p>
         </div>
       </div>
     </div>

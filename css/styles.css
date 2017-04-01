@@ -5,11 +5,22 @@ body {
 
 h1, h2, h3 {
   color: #4dd0e1;
+  font-family: 'Sigmar One', cursive;
+}
+
+p {
+  font-family: 'Exo 2', sans-serif;
 }
 
 .your-total {
   display: none;
 }
+
+#your-toppings, #order-total, #pizzaSize {
+  font-family: 'Sigmar One', cursive;
+  color:  #FF0066;
+}
+
 
 .video-container {
 	position:relative;

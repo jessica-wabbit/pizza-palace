@@ -7,7 +7,7 @@ function Pizza(size, toppings) {
 }
 
 Pizza.prototype.yourOrder = function () {
- return "Based off of the information you've given us, you've ordered a " + " (" + this.size + ") " + "  Pizza, with the following toppings: " + " (" + this.toppings + ") ";
+ return "<p>Based off of the information you've given us, you've ordered a " + this.size + "  Pizza with the following toppings: <br><br> " + this.toppings + "</p>" ;
  }
 
 
@@ -19,12 +19,19 @@ $(document).ready(function(){
     event.preventDefault();
     $(".your-total").show();
     var pizzaSize = $(this).find("#pizza-size").val();
-    $("#pizzaSize").text(pizzaSize);
+    //$("#pizzaSize").text(pizzaSize);
     var newPizza = new Pizza(pizzaSize);
 
     $("input:checkbox[name=topping]:checked").each(function(){
       var toppingsOrdered = $(this).val();
       pizzaSubTotal = pizzaSubTotal +=1
+      newPizza.toppings.push(toppingsOrdered);
+      //$("#your-toppings").append(toppingsOrdered + "<br>");
+    });
+
+    $("input:checkbox[name=meatTopping]:checked").each(function(){
+      var toppingsOrdered = $(this).val();
+      pizzaSubTotal = pizzaSubTotal +=2
       newPizza.toppings.push(toppingsOrdered);
       $("#your-toppings").append(toppingsOrdered + "<br>");
     });
@@ -38,7 +45,8 @@ $(document).ready(function(){
       $("#order-total").text(10 + pizzaSubTotal)
     };
 
-    $(".trial-order").text(newPizza.yourOrder);
+    newPizza.yourOrder();
+    $(".trial-order").append(newPizza.yourOrder());
 
     $(".order-form").hide();
   });
