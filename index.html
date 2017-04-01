@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel ="stylesheet" type="text/css" media="all">
+    <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+    <script src="js/jquery-3.2.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza Palace Order Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Place Your Pizza Palace Pizza Order</h1>
+          <h3>Please fill out the following information:</h3>
+          <p>Remember, all of our pizzas are already topped with a fresh, home-made marinara and a mozarella and romano cheese blend!</p>
+
+          <form id="pizza_order">
+            <div class="pie-sizes">
+              <p><strong>Size of yo Pie:</strong></p>
+              <select class="form-control" id="pizza-size">
+                <option value="5">Medium</option>
+                <option value="7">Large</option>
+                <option value ="10">Family Size</option>
+              </select>
+            </div>
+            <br>
+            <div class="form-group">
+              <p><strong>Add as many toppings as you want, just know that they each cost a dollar:</strong></p>
+              <input type="checkbox" name="topping" value="1">Pepperoni<br>
+              <input type="checkbox" name="topping" value="1">Black Forest Ham<br>
+              <input type="checkbox" name="topping" value="1">Capicola Salami<br>
+              <input type="checkbox" name="topping" value="1">Bacon<br>
+              <input type="checkbox" name="topping" value="1">Chorizo<br>
+              <input type="checkbox" name="topping" value="1">Fennel sausage<br>
+              <input type="checkbox" name="topping" value="1">Green bell pepper<br>
+              <input type="checkbox" name="topping" value="1">Roma Tomatoes<br>
+              <input type="checkbox" name="topping" value="1">Basil<br>
+              <input type="checkbox" name="topping" value="1">Black olives<br>
+              <input type="checkbox" name="topping" value="1">Kalamative olives<br>
+              <input type="checkbox" name="topping" value="1">Spinach<br>
+              <input type="checkbox" name="topping" value="1">Artichoke hearts<br>
+            </div>
+           <button type="submit">Submit Pizza Order</button>
+          </form>
+          <br>
+          <br>
+          <div class="your-total">
+            <p>Your Total comes to: $<span id="order-total"></span>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-4">
+          <h1>All About Pizza Palace</h1>
+          <p>We love build-your-own pies, which is why it's the only thing we offer!</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
