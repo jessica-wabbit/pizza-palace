@@ -1,11 +1,20 @@
+//Business Logic
+
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = [];
 }
 
+// Pizza.prototype.tally = function() {
+//   var totalToppings
+// }
+
 Pizza.prototype.price = function() {
-  return this.size;
+  return this.size + this.toppings;
 }
+
+
+//User Interface Logic
 
 $(document).ready(function(){
   $("form#pizza_order").submit(function(event){
@@ -15,10 +24,8 @@ $(document).ready(function(){
     var newPizza = new Pizza(pizzaSize);
 
     $("input:checkbox[name=topping]:checked").each(function(){
-      var totalToppings = [];
       var toppingsOrdered = parseInt($(this).val());
-      totalToppings.push(toppingsOrdered);
-      newPizza.toppings.push(totalToppings);
+      newPizza.toppings.push(toppingsOrdered);
     });
 
     $("#order-total").text(newPizza.price);
